@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project For IT School</string>
+    <string name="math_mode">Mathematics</string>
+    <string name="geography_mode">Geography</string>
+    <string name="history_mode">History</string>
+    <string name="home_screen_choose_mode">Select game mode:</string>
+    <string name="mathSelecton_screen_choose_mode">Choose game mode</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

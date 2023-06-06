@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ProjectForITSchool" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/beige</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/beige</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_blue</item>
+        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        <item name="colorOnSecondary">@color/dark_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">@color/dark_blue</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
