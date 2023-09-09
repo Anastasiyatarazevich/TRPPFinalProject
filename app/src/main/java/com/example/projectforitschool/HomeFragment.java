@@ -75,7 +75,13 @@ public class HomeFragment extends Fragment {
     {
         Random randomNumber = new Random();
         String [] facts = getResources().getStringArray(R.array.facts);
+        System.out.println(randomNumber.nextInt(facts.length));
         factView.setText(facts[randomNumber.nextInt(facts.length)]);
+        if (randomNumber.nextInt(facts.length)>3){
+            factView.setAllCaps(true);
+        }
+
+
     }
 
 }

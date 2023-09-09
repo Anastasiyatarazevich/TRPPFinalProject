@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-
 public class GeographyModeActivity extends AppCompatActivity {
 
     public ArrayList<Country> countries = new ArrayList<>();
@@ -31,44 +30,47 @@ public class GeographyModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geography_mode);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("AppPreference" , Context.MODE_PRIVATE);
-        gameSize = sharedPreferences.getInt("gameSize" , 10);
+        SharedPreferences sharedPreferences = getSharedPreferences("AppPreference", Context.MODE_PRIVATE);
+        gameSize = sharedPreferences.getInt("gameSize", 10);
 
         GeographyGameModeSelectionFragment fragment = new GeographyGameModeSelectionFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_geography , fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_geography, fragment).commit();
     }
 
-    public void startCountryGameFragment()
-    {
+    public void startCountryGameFragment() {
         initializeGameArrays();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         GeographyCountryGameFragment fragment = new GeographyCountryGameFragment();
-        ft.replace(R.id.frame_layout_geography , fragment);
+        ft.replace(R.id.frame_layout_geography, fragment);
         ft.commit();
     }
 
-    public void startCapitalGameFragment()
-    {
+    public void startCapitalGameFragment() {
         initializeGameArrays();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         GeographyCapitalGameFragment fragment = new GeographyCapitalGameFragment();
-        ft.replace(R.id.frame_layout_geography , fragment);
+        ft.replace(R.id.frame_layout_geography, fragment);
         ft.commit();
     }
 
-    public void startResultFragment()
-    {
+    public void startResultFragment() {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         GeographyGameResultFragment fragment = new GeographyGameResultFragment();
-        ft.replace(R.id.frame_layout_geography , fragment);
+        ft.replace(R.id.frame_layout_geography, fragment);
         ft.commit();
     }
 
 
-    private void initializeGameArrays()
-    {
+    private void initializeGameArrays() {
         if (countries.isEmpty() && gameQuestions.isEmpty()) {
             String countryNames[] = getResources().getStringArray(R.array.CountryName);
+            for (int i = 0; i < countryNames.length; i++) {
+                if (countryNames[i].equals("Thief in Italy") || countryNames[i].equals("Thief in Spain")) {
+                    countryNames[i] += new String(Character.toChars(0x2796));
+                    countryNames[i] += new String(Character.toChars(0x1F4B8));
+                }
+            }
+
             String countryCapitals[] = getResources().getStringArray(R.array.CountryCapital);
             TypedArray flagsId = getResources().obtainTypedArray(R.array.CountryFlag);
 

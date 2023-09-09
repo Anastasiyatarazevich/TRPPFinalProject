@@ -62,7 +62,7 @@ public class GameGeographyMode {
         else
         {
             numberIncorrect++;
-            lives--;
+//            lives--;
             isCorrect = false;
         }
         if (turn == gameSize)
@@ -83,8 +83,9 @@ public class GameGeographyMode {
         else
         {
             numberIncorrect++;
-            lives--;
-            isCorrect = false;
+//            lives--;
+            isCorrect
+                    = false;
         }
         return isCorrect;
     }

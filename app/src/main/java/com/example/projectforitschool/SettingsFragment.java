@@ -61,13 +61,14 @@ public class SettingsFragment extends Fragment {
             {
                 currentGameSize = 30;
             }
-            else if (currentGameSize < 10)
-            {
-                currentGameSize = 10;
-            }
+//            else if (currentGameSize < 10)
+//            {
+//                currentGameSize = 10;
+//            }
             editor.putInt("gameSize", currentGameSize);
             editor.commit();
             counter.setText(String.valueOf(currentGameSize));
+//            currentGameSize=10;
         });
         plus.setOnClickListener(v -> {
             currentGameSize++;
@@ -75,13 +76,14 @@ public class SettingsFragment extends Fragment {
             {
                 currentGameSize = 30;
             }
-            else if (currentGameSize < 10)
-            {
-                currentGameSize = 10;
-            }
+//            else if (currentGameSize < 10)
+//            {
+//                currentGameSize = 10;
+//            }
             editor.putInt("gameSize", currentGameSize);
             editor.commit();
             counter.setText(String.valueOf(currentGameSize));
+//            currentGameSize=10;
         });
 
     }

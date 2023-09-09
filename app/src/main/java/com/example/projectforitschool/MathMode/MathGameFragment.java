@@ -175,7 +175,7 @@ public class MathGameFragment extends Fragment {
             public void onFinish() {
                 textViewTimeLeft.setText("0 sec");
                 homeButtonPressed = true;
-                endGame();
+//                endGame();
             }
         };
         timer.start();

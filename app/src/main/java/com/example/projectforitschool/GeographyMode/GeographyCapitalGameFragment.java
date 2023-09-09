@@ -96,7 +96,7 @@ public class GeographyCapitalGameFragment extends Fragment {
         progressBar.setMax(secondsRemaining);
 
         GeographyModeActivity hostActivity = (GeographyModeActivity) getActivity();
-        game = new GameGeographyMode(GameGeographyMode.Mode.CAPITAL , hostActivity.gameSize , hostActivity.gameQuestions , hostActivity.countries);
+        game = new GameGeographyMode(GameGeographyMode.Mode.CAPITAL , 10 , hostActivity.gameQuestions , hostActivity.countries);
 
         homeButton.setOnClickListener(v ->{
             Intent intent = new Intent(getActivity() , MainActivity.class);
